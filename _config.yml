@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
    galleried snooker area; and sauna and steam room, The Church at the Old Manse is a fantastic 
    base giving easy access to Glasgow, Edinburgh, Livingston and Lanark.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://scott-ad-riley.github.io/" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
