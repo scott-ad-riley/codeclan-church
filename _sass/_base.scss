@@ -95,9 +95,9 @@ a {
     text-decoration: none;
     transition: color 0.3s;
 
-    &:visited {
-        color: darken($grey-color-light, 5%);
-    }
+    // &:visited {
+    //     color: darken($grey-color-light, 5%);
+    // }
 
     &:hover {
         color: lighten($grey-color-light, 15%);

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    {% include {{page.image}} %}
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+        {% include map.html %}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

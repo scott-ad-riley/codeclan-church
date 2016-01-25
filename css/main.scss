@@ -29,6 +29,10 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$sm-header-height: 70px;
+$md-header-height: 100px;
+$lg-header-height: 150px;
+
 
 
 // Use media queries like this:
@@ -43,8 +47,6 @@ $on-laptop:        800px;
         @content;
     }
 }
-
-
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

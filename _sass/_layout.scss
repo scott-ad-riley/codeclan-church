@@ -1,10 +1,23 @@
+.outsideWrapper {
+    margin-bottom: 15px;
+    @extend %clearfix;
+}
+@include media-query($on-palm) {
+    .outsideWrapper {
+        position: relative;
+        width: calc(100% + 30px);
+        left: -15px;
+    }
+}
+
+
 /**
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    // border-top: 5px solid $grey-color-dark;
     // border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    min-height: $sm-header-height;
     background-color: $grey-color-dark;
     color: $grey-color-light;
     // Positioning context for the mobile navigation icon
@@ -12,23 +25,26 @@
 }
 
 .site-title {
-    font-size: 26px;
+    font-size: 1em;
     font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
+    line-height: $sm-header-height;
+    letter-spacing: -0.5px;
     margin-bottom: 0;
     float: left;
-    color: white;
+    color: darken(white, 5%);
+    position: relative;
+    z-index: 5;
 
     // &,
     // &:visited {
     //     color: $grey-color-dark;
     // }
+
 }
 
 .site-nav {
     float: right;
-    line-height: 56px;
+    // line-height: 56px;
 
     // .menu-icon {
     //     display: none;
@@ -56,62 +72,66 @@
     .menu-icon {
         display: block;
         float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 13px;
+        // width: 36px;
+        // height: 26px;
+        // line-height: 0;
+        // padding-top: 13px;
         text-align: center;
+        cursor: pointer;
+        width: 20px;
+        height: $sm-header-height;
 
-        > svg {
-            width: 24px;
-            height: 24px;
-
-            path {
-                fill: $grey-color-light;
-            }
+        path {
+            fill: $grey-color-light;
         }
     }
 
+    .navigation-icon-text {
+        float: left;
+        height: $sm-header-height;
+        line-height: $sm-header-height;
+        margin-right: 7px;
+    }
+
+
+}
+
+#navigation-menu {
+    opacity:0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: $grey-color-dark;
+    .wrapper {
+        height: 100%;
+    }
+    .page-link {
+        display: inline-block;
+        margin-bottom: 22%;
+        width: 100%;
+        font-size: 1.8em;
+        text-align: center;
+        transform: translateY(-30px);
+        transition : transform 0.5s;
+        &:first-child {
+            margin-top:35%;
+        }
+        &.loaded {
+            transform: translateY(0);
+        }
+    }
     .navigation-icon-close {
-        width: 36px;
-        height: 26px; 
         line-height: 100%;
-        top:13px;
         position: fixed;
         z-index: 2;
-        right: 20px;
-    }
-
-    .trigger {
-        display:none;
-        position: fixed;
         top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        z-index: 1;
+        right: 0;
+        padding: 0.7em 0.4em 0 0;
+        font-size: 1.9em;
     }
-
-    //     .trigger {
-    //         clear: both;
-    //         display: none;
-    //     }
-
-    //     &:hover .trigger {
-    //         display: block;
-    //         padding-bottom: 5px;
-    //     }
-
-    //     .page-link {
-    //         display: block;
-    //         padding: 5px 10px;
-
-    //         &:not(:last-child) {
-    //             margin-right: 0;
-    //         }
-    //         margin-left: 20px;
-    //     }
-    // }
 }
 
 
@@ -192,7 +212,7 @@
 
 .page-banner {
     background-size: cover;
-    height: 500px;
+    height: 50vh;
     background-image: url(/images/valley-min.jpeg);
     background-repeat: no-repeat;
     background-position: center center;
