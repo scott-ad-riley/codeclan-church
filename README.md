@@ -8,6 +8,7 @@ Building the site with Jekyll as mentioned above means that by simply creating a
 
 ## Remaining TODO
 
+* Implement 'Sticky/Hidden' header
 * Tablet Version
 * Desktop Version
 * Google Maps
