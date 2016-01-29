@@ -1,6 +1,6 @@
 # Church Rebuild/Codeclan project
 
-** work paused on this site until I have completed the 1 or 2 page basic portfolio site **
+**work paused on this site until I have completed the 1 or 2 page basic portfolio site**
 
 ## Description/Outline
 
