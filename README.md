@@ -1,5 +1,7 @@
 # Church Rebuild/Codeclan project
 
+** work paused on this site until I have completed the 1 or 2 page basic portfolio site **
+
 ## Description/Outline
 
 I've built the site with Jekyll to allow me to easily host and port the project around. I've used the SASS default preprocessor built-in to jekyll and deliberately built the site and interactions without any other js lib or plugins (including jQuery) to keep the size to a minimum. 
